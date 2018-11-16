@@ -1,0 +1,7 @@
+{
+  "name": "webvalor-pedidos-mobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
