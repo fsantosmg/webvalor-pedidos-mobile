@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { CredenciaisDTO } from './../../models/credenciais.dto';
 import { Component } from '@angular/core';
 import { NavController, IonicPage, MenuController } from 'ionic-angular';
@@ -9,27 +10,34 @@ import { NavController, IonicPage, MenuController } from 'ionic-angular';
 })
 export class HomePage {
 
-  creds : CredenciaisDTO = {
+  creds: CredenciaisDTO = {
     email: "",
     senha: ""
   };
 
-  constructor(public navCtrl: NavController, public menu: MenuController) {
+  constructor(
+    public navCtrl: NavController,
+    public menu: MenuController,
+    public auth: AuthService) {
   }
 
   //desabilita e habilita menu ao entrar na pagina principal
   ionViewWillEnter() {
     this.menu.swipeEnable(false);
-    }
-    ionViewDidLeave() {
+  }
+  ionViewDidLeave() {
     this.menu.swipeEnable(true);
-    }
+  }
 
-  login(){
+  login() {
 
-    console.log(this.creds);
+    this.auth.authenticate(this.creds)
+      .subscribe(response => {
+        this.auth.successfulLogin(response.headers.get('Authorization'));
+        this.navCtrl.setRoot('CategoriasPage');
+      },
+      error => {});
 
-    this.navCtrl.setRoot('CategoriasPage');
   }
 
 }
