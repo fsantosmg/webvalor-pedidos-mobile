@@ -13,7 +13,7 @@ export class PaymentPage {
   parcelas: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   formGroup: FormGroup;
-  
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -26,6 +26,6 @@ export class PaymentPage {
   }
   nextPage() {
     this.pedido.pagamento = this.formGroup.value;
-    console.log(this.pedido);
+     this.navCtrl.setRoot('OrderConfirmationPage', {pedido: this.pedido});
   }
 }
