@@ -1,5 +1,5 @@
 export const API_CONFIG = {
   baseUrl: "http://localhost:8080",
-  bucktBaseUrl: "https://s3.us-east-2.amazonaws.com/webvalor"
+  bucketBaseUrl: "https://s3.us-east-2.amazonaws.com/webvalor"
 
 }
