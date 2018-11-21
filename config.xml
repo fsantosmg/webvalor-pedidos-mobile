@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>webvalor-pedidos-mobile</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="net.webvalor" version="1.0.0a" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>WebValorPedidos</name>
+    <description>Sistema para gestão de pedidos mobile</description>
+    <author email="felipe@webvalor.net" href="http://webvalor.net/">WebValor</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
